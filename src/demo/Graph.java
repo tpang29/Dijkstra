@@ -6,47 +6,6 @@ import java.util.Iterator;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
-/*
- * A bi-directional graph G will contain a set (V, E) of all vertices V and all
- * 	edges E. Each edge, e, in E represents a connection between two vertices, u and v, 
- * 	and typically carries a corresponding weight.
- * 
- * This Graph class demonstrates a graph using two layers of maps. 
- * 
- * -The first layer consists of a map in the form String:Vertex within the Graph class. 
- * 	String corresponds to the label of a vertex (name, number, etc.) and the 
- *  vertex is an instance of a custom Vertex object.
- * 
- * -The second layer of mapping exists within the Vertex object itself, which has its 
- * 	own mapping in the form String:Number. String represents a neighbor vertex, n, and 
- * 	Number represents the value of the edge between the source vertex, v, and its neighbor, n.
- *
- *****************************
- *			Layer 1			 *
- *****************************
- *	String	   |	Vertex   *
- *****************************
- *	"A"		   |	A		 *
- *  "B"		   |	B		 *
- *  ...				...		 *
- *****************************
- *
- *
- * ------For Vertex A------
- *****************************
- *			Layer 2			 *
- *****************************
- *	String	   |	Number   *
- *****************************
- *	"B"		   |	75		 *
- *  "C"		   |	118		 *
- *  "E"		   |	65		 *
- *  "M"		   |	100		 *
- *  ...				...		 *
- *****************************
- *
- */
-
 public class Graph {
 
 	private HashMap<String, Vertex> vertexList;
