@@ -5,6 +5,7 @@ public class Demo {
 	public static void main(String[] args) {
 		bidirectionalDemo("a", "i");	
 		unidirectionalDemo("a", "f");
+		MatrixExample();
 	}
 	
 	private static void unidirectionalDemo(String start, String end) {
@@ -69,6 +70,72 @@ public class Demo {
 		g.addEdgeBD("s", "t", 60);
 		
 		g.dijkstra(start, end);
+	}
+
+	public static void MatrixExample() {
+		Graph g = new Graph(new String[] { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o",
+				"p", "q", "r", "s", "t" });
+
+		g.addMatrixEgde("a", "b", 75);
+		g.addMatrixEgde("a", "e", 65);
+		g.addMatrixEgde("a", "c", 118);
+		g.addMatrixEgde("a", "m", 100);
+
+		g.addMatrixEgde("b", "f", 120);
+		g.addMatrixEgde("b", "j", 100);
+
+		g.addMatrixEgde("j", "f", 30);
+		g.addMatrixEgde("j", "k", 70);
+
+		g.addMatrixEgde("k", "l", 40);
+		g.addMatrixEgde("k", "f", 60);
+
+		g.addMatrixEgde("l", "i", 50);
+
+		g.addMatrixEgde("i", "f", 211);
+		g.addMatrixEgde("i", "g", 130);
+		g.addMatrixEgde("i", "h", 101);
+		g.addMatrixEgde("i", "t", 80);
+
+		g.addMatrixEgde("f", "e", 99);
+
+		g.addMatrixEgde("e", "g", 80);
+		g.addMatrixEgde("e", "c", 90);
+
+		g.addMatrixEgde("g", "h", 97);
+		g.addMatrixEgde("g", "d", 70);
+
+		g.addMatrixEgde("h", "d", 100);
+		g.addMatrixEgde("h", "r", 40);
+		g.addMatrixEgde("h", "t", 30);
+
+		g.addMatrixEgde("c", "d", 85);
+		g.addMatrixEgde("c", "n", 40);
+
+		g.addMatrixEgde("d", "o", 130);
+		g.addMatrixEgde("d", "p", 60);
+
+		g.addMatrixEgde("m", "n", 30);
+		g.addMatrixEgde("m", "o", 90);
+
+		g.addMatrixEgde("n", "o", 80);
+
+		g.addMatrixEgde("p", "o", 100);
+		g.addMatrixEgde("p", "q", 20);
+		g.addMatrixEgde("p", "r", 80);
+
+		g.addMatrixEgde("r", "q", 70);
+		g.addMatrixEgde("r", "s", 50);
+
+		g.addMatrixEgde("t", "s", 60);
+
+		g.addMatrixEgde("s", "q", 40);
+
+		g.addMatrixEgde("o", "q", 80);
+
+//		g.printMatrix();	// Display the initial matrix
+
+		g.dijkstraMatrix("a", "i");
 	}
 
 }
