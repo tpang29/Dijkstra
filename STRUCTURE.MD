@@ -15,7 +15,6 @@ String | Vertex
 "D"|D
 ...|...
 "T"|T
-|
  
 # Layer 2
 The second layer consists of a map in the form String:Number within each Vertex object. String represents a neighbor vertex, *n*, and Number represents the value of the edge between the source vertex, *v*, and its neighbor, *n*.
@@ -27,7 +26,6 @@ String | Number
 "C"|118
 "E"|65
 "M"|100
-|
 
 # VertexComparator
 
