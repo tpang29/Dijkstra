@@ -7,7 +7,6 @@ public class Vertex {
 	private String label;
 	private HashMap<String, Number> adjList;
 	private boolean known;
-	// private int distance;
 	private Integer distance;
 	private Vertex path;
 
