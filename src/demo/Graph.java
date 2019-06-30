@@ -21,7 +21,7 @@ public class Graph {
 	public void addEdgeBD(String v1, String v2, int weight) {
 		addEdge(v1, v2);
 
-		// append v1 adjList with v2 and v2 adjList with v1
+		// append v1 vertexList with v2 and v2 adjList with v1
 		vertexList.get(v1).getAdjList().put(v2, weight);
 		vertexList.get(v2).getAdjList().put(v1, weight);
 	}
@@ -29,7 +29,7 @@ public class Graph {
 	public void addEdgeUD(String v1, String v2, int weight) {
 		addEdge(v1, v2);
 
-		// append v1 adjList with v2
+		// append v1 vertexList with v2
 		vertexList.get(v1).getAdjList().put(v2, weight);
 	}
 
